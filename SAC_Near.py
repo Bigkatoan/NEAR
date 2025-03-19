@@ -9,7 +9,7 @@ class SAC:
                  observation_space, 
                  action_space, 
                  maxlen=50000, 
-                 batch_size=32,
+                 batch_size=128,
                  gamma=0.99, 
                  tau=0.005, 
                  lr=0.0001,
