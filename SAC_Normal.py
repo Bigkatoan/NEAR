@@ -70,7 +70,7 @@ class SAC:
         S_ = S_.to(self.device)
         T = T.to(self.device)
         # compute target critic function.
-        A_, log_probs_ = self.actor.sample(S)
+        A_, log_probs_ = self.actor.sample(S_)
         log_probs_ = log_probs_.unsqueeze(1)
         Qt1 = self.critic_1_target(S_, A_) - self.entropy * log_probs_
         Qt2 = self.critic_2_target(S_, A_) - self.entropy * log_probs_
